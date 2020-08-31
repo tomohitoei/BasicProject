@@ -1,3 +1,6 @@
+from django.conf.urls import include, url
+import HelloDjango.views
+
 """
 BasicProject URL Configuration
 
@@ -21,6 +24,6 @@ Including another URLconf
 #from django.urls import path
 
 urlpatterns = [
-    # Uncomment the next line to enable the admin:
-    #path('admin/', admin.site.urls)
+    url(r'^$', HelloDjango.views.index, name='index'),
+    url(r'^home$', HelloDjango.views.index, name='home'),
 ]
